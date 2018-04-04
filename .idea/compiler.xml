@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="eureka_client" />
         <module name="eureka_server" />
+        <module name="eureka_service" />
         <module name="spring-cloud-netflix-archaius" />
         <module name="spring-cloud-netflix-core" />
         <module name="spring-cloud-netflix-eureka-client" />
@@ -34,6 +35,7 @@
     <bytecodeTargetLevel>
       <module name="eureka_client" target="1.8" />
       <module name="eureka_server" target="1.8" />
+      <module name="eureka_service" target="1.8" />
       <module name="spring-cloud-netflix" target="1.8" />
       <module name="spring-cloud-netflix-archaius" target="1.8" />
       <module name="spring-cloud-netflix-core" target="1.8" />

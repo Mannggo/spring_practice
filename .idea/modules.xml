@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/eureka_client/eureka_client.iml" filepath="$PROJECT_DIR$/eureka_client/eureka_client.iml" />
       <module fileurl="file://$PROJECT_DIR$/eureka_server/eureka_server.iml" filepath="$PROJECT_DIR$/eureka_server/eureka_server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/eureka_service/eureka_service.iml" filepath="$PROJECT_DIR$/eureka_service/eureka_service.iml" />
       <module fileurl="file://$PROJECT_DIR$/../spring-cloud-netflix/spring-cloud-netflix.iml" filepath="$PROJECT_DIR$/../spring-cloud-netflix/spring-cloud-netflix.iml" />
       <module fileurl="file://$PROJECT_DIR$/../spring-cloud-netflix/spring-cloud-netflix-archaius/spring-cloud-netflix-archaius.iml" filepath="$PROJECT_DIR$/../spring-cloud-netflix/spring-cloud-netflix-archaius/spring-cloud-netflix-archaius.iml" />
       <module fileurl="file://$PROJECT_DIR$/../spring-cloud-netflix/spring-cloud-netflix-core/spring-cloud-netflix-core.iml" filepath="$PROJECT_DIR$/../spring-cloud-netflix/spring-cloud-netflix-core/spring-cloud-netflix-core.iml" />
