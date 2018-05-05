@@ -25,6 +25,7 @@ public class TableInfoController {
     @GetMapping("/info/{tableName}")
     public ReturnObject getTableInfoByName(@PathVariable("tableName") String tableName) {
         ReturnObject obj = new ReturnObject();
+        int a = 0;
         try {
             TableInfo table = tableInfoService.getTableInfoByName(tableName);
             if (Objects.nonNull(table)) {
