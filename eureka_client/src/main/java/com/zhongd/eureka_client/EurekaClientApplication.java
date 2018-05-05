@@ -21,4 +21,5 @@ public class EurekaClientApplication {
 	public RestTemplate restTemplate(){
 		return new RestTemplate();
 	}
+
 }
