@@ -1,10 +1,9 @@
 package com.zhongd.eureka_client.controller;
 
+import com.zhongd.eureka_client.service.ClientService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.HashMap;
@@ -19,6 +18,9 @@ public class ClientController {
 
     @Autowired
     RestTemplate template;
+
+    @Autowired
+    ClientService clientService;
 
     /**
      * Get请求调用微服务示例
@@ -41,5 +43,11 @@ public class ClientController {
         param.put("str2", "aszdfui32iuh");
         String result = template.postForObject("http://EUREKA-SERVICE/service/calc2", param, String.class);
         System.out.println(result);
+    }
+
+    @PostMapping("/demo")
+    public HashMap<String, Object> demo(@RequestBody HashMap<String, String> param) {
+        HashMap<String, Object> result = clientService.doSomething(param.get("where"), param.get("who"), param.get("when"));
+        return result;
     }
 }
