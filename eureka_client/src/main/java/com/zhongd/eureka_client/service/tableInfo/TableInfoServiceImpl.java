@@ -27,11 +27,11 @@ public class TableInfoServiceImpl implements TableInfoService {
         SqlRowSetMetaData data = rs.getMetaData();
         int cc = data.getColumnCount();
         List<ColumnInfo> cols = new ArrayList<>();
-        for (int i = 0; i <= cc; i ++) {
+        for (int i = 1; i <= cc; i ++) {
             ColumnInfo ci = new ColumnInfo();
             ci.setColumnName(data.getColumnName(i));
             ci.setColumnType(data.getColumnTypeName(i));
-            ci.setRemark(data.getColumnLabel(i));
+            ci.setColumnLength(data.getColumnDisplaySize(i));
             cols.add(ci);
         }
         TableInfo tableInfo = new TableInfo();

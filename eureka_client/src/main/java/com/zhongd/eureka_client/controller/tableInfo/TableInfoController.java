@@ -4,6 +4,8 @@ import com.zhongd.eureka_client.entity.ReturnCode;
 import com.zhongd.eureka_client.entity.ReturnObject;
 import com.zhongd.eureka_client.entity.TableInfo;
 import com.zhongd.eureka_client.service.tableInfo.TableInfoService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -22,6 +24,8 @@ public class TableInfoController {
     @Autowired
     TableInfoService tableInfoService;
 
+    Logger logger = LoggerFactory.getLogger(this.getClass());
+
     @GetMapping("/info/{tableName}")
     public ReturnObject getTableInfoByName(@PathVariable("tableName") String tableName) {
         ReturnObject obj = new ReturnObject();
@@ -35,7 +39,7 @@ public class TableInfoController {
                 obj.setDescription(ReturnCode.FAIL.getMessage());
             }
         } catch (Exception e) {
-            e.printStackTrace();
+            logger.error(e.getMessage(), e);
             obj.setCode(ReturnCode.FAIL.getCode());
             obj.setDescription(ReturnCode.FAIL.getMessage());
         }
